@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Debit Card — Desktop Interface (Barcode Sync)</title>
+<style>
+body{font-family:Inter,Arial,Helvetica,sans-serif;background:#07101a;color:#dbe7f0;margin:0;padding:28px;}
+.container{max-width:1100px;margin:0 auto;display:flex;gap:24px;}
+.card{width:520px;height:330px;border-radius:14px;padding:18px;background:linear-gradient(135deg,#000,#111);position:relative;box-shadow:0 10px 30px rgba(0,0,0,0.6);}
+.chip{width:72px;height:56px;background:#f5f5f5;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;color:#111;font-weight:700;}
+.qr{width:140px;height:140px;background:#fff;border-radius:12px;overflow:hidden;display:inline-block;}
+.qr img{width:100%;height:100%;object-fit:contain;}
+.back{position:absolute;right:8px;bottom:-20px;opacity:0.08;width:320px;transform:rotate(-6deg);}
+.panel{flex:1;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;}
+.tag{background:linear-gradient(90deg,#111,#07101a);padding:6px 10px;border-radius:8px;color:#f5a524;font-weight:700;float:right;}
+.table{width:100%;margin-top:12px;border-collapse:collapse;}
+.small{color:#9aa6b2;font-size:13px;}
+.btn{background:#f5a524;color:#07101a;padding:8px 12px;border-radius:8px;border:0;font-weight:700;cursor:pointer;}
+</style></head><body>
+<div class="container">
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+      <div style="display:flex;gap:12px;align-items:flex-start;"><div class="chip">NFC</div><div class="qr"><img src="https://i.ibb.co/rRLHygZZ/Whats-App-Image-2025-10-03-at-10-21-39-f5df247b.jpg" alt="qr"/></div></div>
+      <div class="tag">CARD FEE $9,200 (PAID)</div>
+    </div>
+    <div style="margin-top:10px;"><div style="font-size:26px;letter-spacing:6px;">1217 1994 1884 1664</div><div class="small" style="margin-top:6px;">VALID THRU <strong>09/29</strong></div></div>
+    <div style="display:flex;justify-content:space-between;align-items:end;margin-top:12px;">
+      <div><div class="small">CARDHOLDER</div><div style="font-weight:700;font-size:15px;margin-top:6px;">VINCENZO J MIRCI</div></div>
+      <img class="back" src="/mnt/data/F96C514A-91F4-438B-AEAB-D4B366F02B38.jpeg" alt="back"/>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Debit Card — Account Overview</h2>
+    <div class="small">Card linked to: Cash App (Bitcoin) · CoinTracker</div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px;">
+      <div><div class="small">Available Balance</div><div style="font-size:28px;font-weight:700;">$50,000,000.00</div><div class="small">Daily limit: $2,000,000 · Card limit: $50,000,000</div></div>
+      <div style="text-align:right;"><div class="small">Activation status</div><div style="font-weight:800;color:#ffd8a8;margin-top:6px;" id="status">Awaiting barcode sync</div></div>
+    </div>
+
+    <div style="margin-top:14px;display:flex;gap:12px;"><button class="btn">Verify Card (activate)</button><button class="btn" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:#9aa6b2;">Request Ledger</button></div>
+
+    <div style="margin-top:14px;padding:12px;background:rgba(255,255,255,0.02);border-radius:10px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;"><div><div style="font-weight:700;">Barcode sync fee required</div><div class="small">This final sync ($5,500) links the card barcode to your wallet so the courier can release the package.</div></div><div style="text-align:right;"><div style="font-weight:800;color:#ffd8a8;">$5,500</div><button class="btn" style="margin-top:8px;padding:8px 12px;font-size:13px;">Pay Sync Fee</button></div></div>
+    </div>
+
+    <div style="margin-top:12px;padding:12px;background:rgba(255,255,255,0.01);border-radius:10px;"><strong>Secured Ship</strong><div class="small">Shipment is awaiting barcode sync to release.</div><div style="float:right;"><div class="small">Courier:</div><div style="font-weight:700;">Secured Ship</div></div></div>
+
+    <div style="margin-top:14px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;"><div style="font-weight:700;">Recent activity</div><button class="btn" style="background:#071a20;color:#a6f0c9;border:1px solid rgba(255,255,255,0.03);"> $50 Test</button></div>
+      <table class="table" style="margin-top:8px;"><thead><tr><th class="small">When</th><th class="small">Description</th><th class="small" style="text-align:right">Amount</th></tr></thead><tbody><tr><td class="small">Sep 18</td><td>Initial funding — trading</td><td style="text-align:right">-$22,000</td></tr><tr><td class="small">Sep 20</td><td>Processing / customs</td><td style="text-align:right">-$5,000</td></tr><tr><td class="small">Sep 22</td><td>Mobilization</td><td style="text-align:right">-$3,000</td></tr><tr><td class="small">Sep 24</td><td>Activation attempt</td><td style="text-align:right">-$1,500</td></tr><tr><td class="small">Sep 26</td><td><em>Activation fee (PAID)</em></td><td style="text-align:right;color:#a6f0c9;">-$9,200</td></tr><tr><td class="small">Sep 28</td><td><em>Barcode sync (required)</em></td><td style="text-align:right;color:#ffd8a8;">-$5,500</td></tr></tbody></table>
+    </div>
+
+    <div style="margin-top:12px;" class="small">Need help? Scan the QR on the card with Cash App → Bitcoin → Receive to verify the wallet address. The barcode sync fee is required to fully activate the card and release the shipment. Request the ledger for full transparency.</div>
+  </div>
+</div>
+</body></html>
